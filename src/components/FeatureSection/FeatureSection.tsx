@@ -22,7 +22,7 @@ const FeatureSection: React.FC = () => {
         {/* Feature Boxes 1 */}
         <div className="md:flex md:justify-between justify-center items-center mt-4 gap-20">
           {/* Feature Box 1 */}
-          <div className="relative w-[405px] h-[473px] mb-10">
+          <div className="relative md:w-[405px] md:h-[473px] w-[100%] mb-10">
             <img src={container1} alt="container1" className="object-cover" />
             <div className="absolute top-[58%] left-6 transform -translate-y-1/2 text-left ">
               <h4 className="text-[38px] md:text-[48px] font-semibold font-quicksand text-black">Track </h4>
@@ -35,7 +35,7 @@ const FeatureSection: React.FC = () => {
           </div>
 
           {/* Feature Box 2 */}
-          <div className="relative w-[405px] h-[473px] mb-10">
+          <div className="relative md:w-[405px] md:h-[473px] w-[100%] mb-10">
             <img src={container2} alt="container2" className="object-cover" />
             <div className="absolute top-[60%] left-6 transform -translate-y-1/2 text-left text-black">
               <h4 className="text-[38px] md:text-[48px] font-semibold font-quicksand text-black">Send Instant </h4>
@@ -47,7 +47,7 @@ const FeatureSection: React.FC = () => {
           </div>
 
           {/* Feature Box 3 */}
-          <div className="relative w-[405px] h-[473px] mb-10">
+          <div className="relative md:w-[405px] md:h-[473px] w-[100%] mb-10">
             <img src={container3} alt="container3" className="object-cover" />
             <div className="absolute top-[57%] left-6 transform -translate-y-1/2 text-left text-black">
               <h4 className="text-[38px] md:text-[48px] font-semibold font-quicksand text-black">Automate </h4>

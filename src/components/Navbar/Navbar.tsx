@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Logo from '../../assets/image1.png';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   console.log('Rendering Navbar');
@@ -9,9 +10,9 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 md:w-[835px] md:h-[90px] w-[450px] h-[45px] bg-[#F9F9FB] border border-[#DFE1E6] rounded-[16px] flex items-center justify-center z-50 ">
+    <div className="fixed top-4 md:left-1/2 md:transform md:-translate-x-1/2 md:w-[835px] md:h-[90px] w-[100%] h-[45px] bg-[#F9F9FB] border border-[#DFE1E6] rounded-[16px] flex items-center justify-center z-50 overflow-hidden">
       {/* Inner Nav */}
-      <nav className="w-[818px] h-[72px] bg-white shadow-md border border-[#DFE1E6] rounded-[12px] flex items-center justify-between px-6">
+      <nav className="md:w-[818px] md:h-[72px] w-[100%] h-[100%] bg-white shadow-md border border-[#DFE1E6] rounded-[12px] flex items-center justify-between px-6">
         {/* Logo and Name */}
         <div className="flex items-center gap-2">
           <img
@@ -76,13 +77,13 @@ const Navbar: React.FC = () => {
             Login
           </button>
           <button className="px-4 py-2 text-white bg-[#7047EB] rounded-[10px] hover:bg-purple-700 font-sf-pro-rounded">
-            Get Started
+          <Link to="/enroll">Get Started</Link>
           </button>
         </div>
       </nav>
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-[90px] left-0 w-full h-screen bg-white z-40 flex flex-col items-center py-6">
+        <div className="absolute top-[90px] left-0 md:w-full md:h-screen w-[100%] h-[100%] bg-white z-40 flex flex-col items-center py-6">
           <a href="#about" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
             About
           </a>
@@ -99,11 +100,11 @@ const Navbar: React.FC = () => {
             Contact
           </a>
           <div className="flex flex-col gap-2 w-full px-4 mt-4">
-            <button className="w-full py-2 border border-[#DFE1E6] rounded-[10px] hover:bg-gray-100 bg-[#F9F9FB] font-sf-pro-rounded">
+            <button className="md:w-full w-[100%]  py-2 border border-[#DFE1E6] rounded-[10px] hover:bg-gray-100 bg-[#F9F9FB] font-sf-pro-rounded">
               Login
             </button>
-            <button className="w-full py-2 text-white bg-[#7047EB] rounded-[10px] hover:bg-purple-700 font-sf-pro-rounded">
-              Get Started
+            <button className="md:w-full w-[100%] py-2 text-white bg-[#7047EB] rounded-[10px] hover:bg-purple-700 font-sf-pro-rounded">
+              <Link to="/enroll">Get Started</Link>
             </button>
           </div>
         </div>

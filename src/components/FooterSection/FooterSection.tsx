@@ -8,19 +8,19 @@ const FooterSection: React.FC = () => {
   return (
     <div className="md:mt-72 flex flex-col items-center mt-40">
       <div
-        className="relative md:h-[824px] h-[300px] w-[1440px]"
+        className="relative md:h-[824px] h-[300px] w-full md:w-[1440px]"
       >
         {/* Flex container for images */}
         <div className="md:flex md:flex-wrap flex-nowrap">
           <img
             src={Path2}
             alt="Path 2"
-            className="hidden md:block md:w-[700px] md:h-[702px] object-cover w-[350px] h-[351px]"
+            className="hidden md:block md:w-[700px] md:h-[702px] object-cover w-[100%] h-[351px]"
           />
           <img
             src={Path1}
             alt="Path 1"
-            className="hidden md:block md:w-[700px] md:h-[702px] object-cover w-[350px] h-[351px]"
+            className="hidden md:block md:w-[700px] md:h-[702px] object-cover w-[100%] h-[351px]"
           />
         </div>
 
@@ -33,7 +33,7 @@ const FooterSection: React.FC = () => {
             className="md:w-[139px] md:h-[139px] mb-5 w-[50px] h-[50px]"
           />
           {/* Centered text */}
-          <h3 className="ml-20 text-center font-sf-pro-rounded font-semibold md:text-[56px] leading-tight mb-5 text-[25px] sm:leading-tight">
+          <h3 className="md:ml-20 text-center font-sf-pro-rounded font-semibold md:text-[56px] leading-tight mb-5 text-[25px]">
             Ready to Get Started? Let’s Make <br />
             Daycare Management Easy for You!
           </h3>
@@ -41,7 +41,7 @@ const FooterSection: React.FC = () => {
             Manage your daycare effortlessly with our all-in-one system. From <br />
             attendance tracking to staff management, we’ve got you covered.
           </p>
-          <button className="md:w-[220px] md:h-[52px] rounded-[12px] md:px-2 md:py-4 py-1 px-1 bg-[#7047EB] gap-2 text-center md:text-[16px] font-sf-pro-rounded leading-tight text-white font-semibold w-[160px] h-[40px] text-[15px]">
+          <button className="md:w-[220px] md:h-[70px] rounded-[12px] md:px-2 md:py-4 py-1 px-1 bg-[#7047EB] gap-2 text-center md:text-[16px] font-sf-pro-rounded leading-tight text-white font-semibold w-[151px] h-[64px] text-[15px]">
             Start Your Free Trial<span className='hidden sm:block'>🚀</span> 
           </button>
         </div>
@@ -59,7 +59,7 @@ const FooterSection: React.FC = () => {
             Daycare.
           </h3>
         </div>
-        <nav className="md:flex md:gap-8 gap-4 flex-wrap justify-center">
+        <nav className="md:flex md:gap-8 gap-4 flex-wrap justify-center space-x-4">
           <a href="#about" className="text-gray-900 hover:text-gray-600 font-sf-pro-rounded md:text-[16px] text-[14px]">
             About
           </a>

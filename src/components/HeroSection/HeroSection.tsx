@@ -3,10 +3,10 @@ import HeroPic from "../../assets/Heropic.jpg";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative w-full mt-40">
+    <div className="relative md:w-full w-[100%] mt-40">
       {/* Background Image */}
       <div className="hidden md:block">
-        <img src={HeroPic} alt="Daycare Hero" className="w-full h-auto object-cover" />
+        <img src={HeroPic} alt="Daycare Hero" className="md:w-full w-[100%] h-auto object-cover" />
       </div>
 
       {/* Overlay Section */}
