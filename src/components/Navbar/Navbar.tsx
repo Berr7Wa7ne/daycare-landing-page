@@ -8,108 +8,113 @@ const Navbar: React.FC = () => {
   
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    console.log('Menu State:', !isMenuOpen);
   };
   return (
-    <div className="fixed top-4 md:left-1/2 md:transform md:-translate-x-1/2 md:w-[835px] md:h-[90px] w-[100%] h-[45px] bg-[#F9F9FB] border border-[#DFE1E6] rounded-[16px] flex items-center justify-center z-50 overflow-hidden">
-      {/* Inner Nav */}
-      <nav className="md:w-[818px] md:h-[72px] w-[100%] h-[100%] bg-white shadow-md border border-[#DFE1E6] rounded-[12px] flex items-center justify-between px-6">
-        {/* Logo and Name */}
-        <div className="flex items-center gap-2">
-          <img
-            src={Logo}
-            alt="Daycare Logo"
-            className="w-8 h-8 rounded-full"
-          />
-          <span className="text-2xl font-bold text-black font-sf-pro-rounded">Daycare.</span>
-        </div>
+<div className="fixed top-4 md:left-1/2 md:transform md:-translate-x-1/2 md:w-[835px] md:h-[90px] w-[100%] h-[45px] bg-[#F9F9FB] border border-[#DFE1E6] rounded-[16px] flex items-center justify-center z-50">
+  {/* Background overlay */}
+  {isMenuOpen && (
+    <div className="fixed top-0 left-0 w-full h-full bg-white z-40"></div>
+  )}
 
-                {/* Hamburger Icon */}
-          <div className="md:hidden">
-          <button onClick={toggleMenu} className="focus:outline-none">
-            {isMenuOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-6 h-6 text-black"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-6 h-6 text-black"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
-            )}
-          </button>
-        </div>
-
-        {/*Desktop Navigation Links */}
-        <div className="hidden md:flex gap-6">
-          <a href="#about" className="text-black hover:text-gray-600 font-sf-pro-rounded text-[16px]">
-            About
-          </a>
-          <a href="#features" className="text-black hover:text-gray-600 font-sf-pro-rounded text-[16px]">
-            Features
-          </a>
-          <a href="#pricing" className="text-black hover:text-gray-600 font-sf-pro-rounded text-[16px]">
-            Pricing
-          </a>
-          <a href="#faqs" className="text-black hover:text-gray-600 font-sf-pro-rounded text-[16px]">
-            FAQ's
-          </a>
-          <a href="#contact" className="text-black hover:text-gray-600 font-sf-pro-rounded text-[16px]">
-            Contact
-          </a>
-        </div>
-
-        {/* Buttons */}
-        <div className="hidden md:flex items-center gap-4">
-          <button className="px-4 py-2 border border-[#DFE1E6] rounded-[10px] hover:bg-gray-100 bg-[#F9F9FB] font-sf-pro-rounded">
-            Login
-          </button>
-          <button className="px-4 py-2 text-white bg-[#7047EB] rounded-[10px] hover:bg-purple-700 font-sf-pro-rounded">
-          <Link to="/enroll">Get Started</Link>
-          </button>
-        </div>
-      </nav>
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="absolute top-[90px] left-0 md:w-full md:h-screen w-[100%] h-[100%] bg-white z-40 flex flex-col items-center py-6">
-          <a href="#about" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
-            About
-          </a>
-          <a href="#features" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
-            Features
-          </a>
-          <a href="#pricing" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
-            Pricing
-          </a>
-          <a href="#faqs" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
-            FAQ's
-          </a>
-          <a href="#contact" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
-            Contact
-          </a>
-          <div className="flex flex-col gap-2 w-full px-4 mt-4">
-            <button className="md:w-full w-[100%]  py-2 border border-[#DFE1E6] rounded-[10px] hover:bg-gray-100 bg-[#F9F9FB] font-sf-pro-rounded">
-              Login
-            </button>
-            <button className="md:w-full w-[100%] py-2 text-white bg-[#7047EB] rounded-[10px] hover:bg-purple-700 font-sf-pro-rounded">
-              <Link to="/enroll">Get Started</Link>
-            </button>
-          </div>
-        </div>
-      )}
+  {/* Inner Nav */}
+  <nav className="relative md:w-[818px] md:h-[72px] w-[100%] h-[100%] bg-white shadow-md border border-[#DFE1E6] rounded-[12px] flex items-center justify-between px-6 z-50">
+    {/* Logo and Name */}
+    <div className="flex items-center gap-2">
+      <img src={Logo} alt="Daycare Logo" className="w-8 h-8 rounded-full" />
+      <span className="text-2xl font-bold text-black font-sf-pro-rounded">
+        Daycare.
+      </span>
     </div>
+
+    {/* Hamburger Icon */}
+    <div className="md:hidden z-50">
+      <button onClick={toggleMenu} className="focus:outline-none">
+        {isMenuOpen ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6 text-black"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6 text-black"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        )}
+      </button>
+    </div>
+
+    {/* Desktop Navigation Links */}
+    <div className="hidden md:flex gap-6">
+      <a href="#about" className="text-black hover:text-gray-600 font-sf-pro-rounded text-[16px]">
+        About
+      </a>
+      <a href="#features" className="text-black hover:text-gray-600 font-sf-pro-rounded text-[16px]">
+        Features
+      </a>
+      <a href="#pricing" className="text-black hover:text-gray-600 font-sf-pro-rounded text-[16px]">
+        Pricing
+      </a>
+      <a href="#faqs" className="text-black hover:text-gray-600 font-sf-pro-rounded text-[16px]">
+        FAQ's
+      </a>
+      <a href="#contact" className="text-black hover:text-gray-600 font-sf-pro-rounded text-[16px]">
+        Contact
+      </a>
+    </div>
+
+    {/* Buttons */}
+    <div className="hidden md:flex items-center gap-4">
+      <button className="px-4 py-2 border border-[#DFE1E6] rounded-[10px] hover:bg-gray-100 bg-[#F9F9FB] font-sf-pro-rounded">
+        Login
+      </button>
+      <button className="px-4 py-2 text-white bg-[#7047EB] rounded-[10px] hover:bg-purple-700 font-sf-pro-rounded">
+        <Link to="/enroll">Get Started</Link>
+      </button>
+    </div>
+  </nav>
+
+  {/* Mobile Menu */}
+  {isMenuOpen && (
+    <div className="absolute top-[90px] left-0 w-full h-auto bg-white z-50 flex flex-col items-center py-6">
+      <a href="#about" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
+        About
+      </a>
+      <a href="#features" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
+        Features
+      </a>
+      <a href="#pricing" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
+        Pricing
+      </a>
+      <a href="#faqs" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
+        FAQ's
+      </a>
+      <a href="#contact" className="py-2 px-4 text-black hover:bg-gray-100 font-sf-pro-rounded w-full text-center">
+        Contact
+      </a>
+      <div className="flex flex-col gap-2 w-full px-4 mt-4 mr-5">
+        <button className="w-full py-2 border border-[#DFE1E6] rounded-[10px] hover:bg-gray-100 bg-[#F9F9FB] font-sf-pro-rounded">
+          Login
+        </button>
+        <button className="w-full py-2 text-white bg-[#7047EB] rounded-[10px] hover:bg-purple-700 font-sf-pro-rounded">
+        <Link to="/enroll">Get Started</Link>
+        </button>
+      </div>
+    </div>
+  )}
+</div>
   );
 };
 

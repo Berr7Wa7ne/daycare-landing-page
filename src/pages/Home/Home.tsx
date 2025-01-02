@@ -9,7 +9,7 @@ import FooterSection from '../../components/FooterSection/FooterSection';
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <Navbar />
       <HeroSection />
       <FeatureSection />

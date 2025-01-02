@@ -24,7 +24,7 @@ const FeatureSection: React.FC = () => {
           {/* Feature Box 1 */}
           <div className="relative md:w-[405px] md:h-[473px] w-[100%] mb-10">
             <img src={container1} alt="container1" className="object-cover" />
-            <div className="absolute top-[58%] left-6 transform -translate-y-1/2 text-left ">
+            <div className="absolute top-[50%] left-6 transform -translate-y-1/2 text-left ">
               <h4 className="text-[38px] md:text-[48px] font-semibold font-quicksand text-black">Track </h4>
               <h4 className="font-courgette text-black text-[38px] md:text-[48px] font-semibold">Attendance</h4>
               <p className="text-[17px] md:text-[18px] mt-2 text-black font-sf-pro-rounded">
@@ -37,7 +37,7 @@ const FeatureSection: React.FC = () => {
           {/* Feature Box 2 */}
           <div className="relative md:w-[405px] md:h-[473px] w-[100%] mb-10">
             <img src={container2} alt="container2" className="object-cover" />
-            <div className="absolute top-[60%] left-6 transform -translate-y-1/2 text-left text-black">
+            <div className="absolute top-[50%] left-6 transform -translate-y-1/2 text-left text-black">
               <h4 className="text-[38px] md:text-[48px] font-semibold font-quicksand text-black">Send Instant </h4>
               <h4 className="font-courgette text-black text-[38px] md:text-[48px] font-semibold">Updates</h4>
               <p className="text-[17px] md:text-[18px] mt-2 font-sf-pro-rounded">
@@ -49,11 +49,11 @@ const FeatureSection: React.FC = () => {
           {/* Feature Box 3 */}
           <div className="relative md:w-[405px] md:h-[473px] w-[100%] mb-10">
             <img src={container3} alt="container3" className="object-cover" />
-            <div className="absolute top-[57%] left-6 transform -translate-y-1/2 text-left text-black">
+            <div className="absolute top-[52%] left-6 transform -translate-y-1/2 text-left text-black">
               <h4 className="text-[38px] md:text-[48px] font-semibold font-quicksand text-black">Automate </h4>
               <h4 className="font-courgette text-black text-[38px] md:text-[48px] font-semibold mt-0">Payments</h4>
               <p className="text-[17px] md:text-[18px] mt-2 font-sf-pro-rounded">
-                Never worry about chasing payments <br />again. Our system automatically <br />generates bills, send reminders, and <br />processes payments, saving you time and <br />effort.
+                Never worry about chasing payments <br />again. Our system automatically <br />generates bills, send reminders, and <br />processes payments, saving you time and effort.
               </p>
             </div>
           </div>
@@ -68,7 +68,7 @@ const FeatureSection: React.FC = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-start w-full lg:w-[1198px] h-auto lg:h-[717px] mt-14 gap-6">
+  <div className="flex flex-col lg:flex-row justify-center items-start w-full lg:w-[1198px] h-auto lg:h-[717px] mt-14 gap-6">
   {/* Text Container */}
   <div className="bg-[#F1EDFD] w-full lg:w-[589px] h-auto lg:h-[717px] text-left p-5 flex flex-col justify-between rounded-[16px]">
     {/* Title */}

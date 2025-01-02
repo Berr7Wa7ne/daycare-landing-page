@@ -55,7 +55,8 @@ const PricingSectionMobile: React.FC = () => {
       <h4 className="text-[18px] font-sf-pro-rounded font-semibold mt-2 text-center">
         Choose a Plan That Fits Your Daycare’s Needs
       </h4>
-      <div className="flex flex-col gap-4 mt-6">
+      {/* Adjust styles for medium screens */}
+      <div className="flex flex-col items-center justify-center md:flex-row md:justify-center md:gap-6 lg:gap-8 mt-6">
         {pricingPlans.map((plan, index) => (
           <PricingCard key={index} {...plan} />
         ))}
